@@ -1,21 +1,22 @@
 {
-  "name": "oww-os",
+  "name": "os-poc",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "Proof of concept for an operating system with systems, avatars, goals, needs, and mappings.",
+  "main": "src/app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
   "dependencies": {
-    "@prisma/client": "^6.12.0",
-    "express": "^5.1.0",
-    "pg": "^8.16.3",
-    "prisma": "^6.12.0"
+    "@prisma/client": "^5.x.x", 
+    "express": "^4.x.x",
+    "pg": "^8.x.x"
   },
   "devDependencies": {
-    "nodemon": "^3.1.10"
+    "nodemon": "^3.x.x",
+    "prisma": "^5.x.x" 
   }
 }
