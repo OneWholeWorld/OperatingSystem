@@ -1,0 +1,93 @@
+// prisma/schema.prisma
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model System {
+  id               String    @id @default(uuid())
+  name             String    @unique // e.g., "human (samarjit)", "car (hundai creta)"
+  type             String    // e.g., "human", "animal", "robot", "car"
+  createdAt        DateTime  @default(now())
+  updatedAt        DateTime  @updatedAt
+  avatars          Avatar[]
+  // Add this inverse relation for mappings where this system is the fulfiller
+  fulfilledMappings Mapping[] @relation("FulfillerSystemToMapping")
+}
+
+model Avatar {
+  id               String   @id @default(uuid())
+  name             String   // e.g., "father", "son", "teacher", "hundai creta"
+  systemId         String
+  system           System   @relation(fields: [systemId], references: [id], onDelete: Cascade)
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+  goals            Goal[]
+  // Add this inverse relation for mappings where this avatar is the fulfiller
+  fulfilledMappings Mapping[] @relation("FulfillerAvatarToMapping")
+}
+
+model Goal {
+  id        String   @id @default(uuid())
+  description String
+  status    String   @default("pending") // e.g., "pending", "in-progress", "fulfilled", "canceled"
+  avatarId  String
+  avatar    Avatar   @relation(fields: [avatarId], references: [id], onDelete: Cascade)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  needs     Need[]
+}
+
+model Need {
+  id          String   @id @default(uuid())
+  description String
+  goalId      String
+  goal        Goal     @relation(fields: [goalId], references: [id], onDelete: Cascade)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  mappings    Mapping[] @relation("NeedToFulfiller") // Needs can be fulfilled by multiple mappings
+}
+
+enum MappingStatus {
+  PENDING
+  IN_PROGRESS
+  FULFILLED
+  REJECTED
+  CANCELED
+}
+
+model Mapping {
+  id               String        @id @default(uuid())
+  needId           String
+  need             Need          @relation("NeedToFulfiller", fields: [needId], references: [id])
+  fulfillerSystemId String
+  fulfillerSystem  System        @relation("FulfillerSystemToMapping", fields: [fulfillerSystemId], references: [id]) // Renamed relation
+  fulfillerAvatarId String?      // Optional: if a specific avatar fulfills it
+  fulfillerAvatar  Avatar?       @relation("FulfillerAvatarToMapping", fields: [fulfillerAvatarId], references: [id]) // Renamed relation
+  status           MappingStatus @default(PENDING)
+  notes            String?
+  createdAt        DateTime      @default(now())
+  updatedAt        DateTime      @updatedAt
+}
+
+enum LogType {
+  SYSTEM_CREATED
+  AVATAR_CREATED
+  GOAL_CREATED
+  NEED_CREATED
+  MAPPING_CREATED
+  MAPPING_STATUS_UPDATED
+}
+
+model Log {
+  id          String   @id @default(uuid())
+  timestamp   DateTime @default(now())
+  type        LogType
+  description String
+  entityId    String? // ID of the system, avatar, goal, etc., that the log entry refers to
+  metadata    Json?   // Optional: Store additional JSON data
+}
