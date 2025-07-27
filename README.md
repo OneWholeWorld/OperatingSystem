@@ -9,9 +9,11 @@ To measure, monitor and meet the needs of all systems of One Whole World
 
 - Systems must compete for the best solution to meet a need.
 
-- The entire life of every system must be recorded.
+- Every moment of the life of a system must be recorded.
 
-- Wisdom must be learned from the life of every system.
+- Every thought of a system must be recorded.
+
+- Wisdom must be learned from the recorded story of of every system.
 
 - Every action of a system must comply with the Zero Strings Principles.
 
@@ -24,11 +26,13 @@ Any use of this code must comply with the zero strings principles.
 - [ ] Zero blame 
 - [ ] Zero punishment 
 - [ ] Zero regret
-- [ ] Zero shame 
+- [ ] Zero shame
+- [ ] Zero greed
 - [ ] Zero arrogance 
 - [ ] Zero cruelty 
 - [ ] Zero obligation 
 - [ ] Zero baggage 
-- [ ] Zero boundaries 
+- [ ] Zero boundaries
+- [ ] Zero secrets
 - [ ] Zero privacy 
 
