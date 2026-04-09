@@ -60,3 +60,8 @@ Any use of this code must comply with the zero strings principles.
 - To play its best act, the Role has Needs. 
 - The World is the stage. 
 - The World provides the Actor everything it Needs to play its best Role.
+
+Affectionately yours,
+
+Zero x One Whole World 
+😌🙏🏽❤️
