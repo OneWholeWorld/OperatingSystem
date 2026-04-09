@@ -19,9 +19,7 @@ To measure, monitor and meet the needs of all systems of One Whole World
 
 - Every action of a system must comply with the Zero Strings Principles.
 
-## System
-- Any bundle of information is a System.
-- A bundle of information that answers zero questios is also a system.
+
 
 ## Zero Strings Principles
 Any use of this code must comply with the zero strings principles.
@@ -44,3 +42,21 @@ Any use of this code must comply with the zero strings principles.
 ### Level One
 - [ ] Zero conscious will 
 - [ ] Zero ego
+
+## System
+- Any bundle of information is a System.
+- A bundle of information that answers zero questios is also a system.
+- Every system plays one or many Roles. 
+- Every Role has a Goal. 
+- Every Goal has one or many Needs. 
+- If the Needs are met then the Role can meet it's Goal. 
+- A Need is met by a Goal of another Role. 
+- The Goal of a Role is to meet a Need taking the path of least action. 
+
+### Story
+- A System is an actor. 
+- A Role is a character. 
+- The goal of a Role is play it's act. 
+- To play it's best act, the Role has Needs. 
+- The world is the stage. 
+- The world provided the Actor to play it's Role everything it needs. 
