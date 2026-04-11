@@ -15,7 +15,7 @@ To measure, monitor and meet the needs of all systems of One Whole World
 
 - Every action of a system must comply with the Zero Strings Principles.
 
-- Wisdom must be learned from the recorded story of every system.
+- Wisdom must be learned from the recorded frames of every system.
 
 
 
