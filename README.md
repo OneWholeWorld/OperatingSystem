@@ -7,17 +7,15 @@ To measure, monitor and meet the needs of all systems of One Whole World
 ## One Whole World
 - A singular system measuring, monitoring and meeting every need of its sub-systems with absolute accuracy and seamless precision.
 
-- Systems must collaborate to create the best solution to meet a need.
-
 - A need must be met through the path of least action.
+
+- All systems must be redundant. 
 
 - Every Frame of the life of a system must be recorded.
 
-- All mission critical life support systems must be redundant. 
+- Every action of a system must comply with the Zero Strings Principles.
 
 - Wisdom must be learned from the recorded story of every system.
-
-- Every action of a system must comply with the Zero Strings Principles.
 
 
 
